@@ -1,0 +1,7 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main_reqres_dev.dart
+ASSET_PREFIX=reqres_dev
+BUNDLE_NAME=ReqRes DEV
+BUNDLE_DISPLAY_NAME=ReqRes DEV

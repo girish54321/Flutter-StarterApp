@@ -5,9 +5,15 @@
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 project 'Runner', {
-  'Debug' => :debug,
-  'Profile' => :release,
-  'Release' => :release,
+  'Debug-reqres' => :debug,
+  'Profile-reqres' => :release,
+  'Release-reqres' => :release,
+  'Debug-reqres_dev' => :debug,
+  'Profile-reqres_dev' => :release,
+  'Release-reqres_dev' => :release,
+  'Debug-reqres_qa' => :debug,
+  'Profile-reqres_qa' => :release,
+  'Release-reqres_qa' => :release,
 }
 
 def flutter_root
