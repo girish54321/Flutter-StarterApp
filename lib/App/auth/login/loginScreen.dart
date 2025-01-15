@@ -70,6 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
     } else {
       // Helper().vibratPhone();
     }
+    setState(() {});
   }
 
   void createAccount() {

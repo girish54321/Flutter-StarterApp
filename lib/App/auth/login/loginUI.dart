@@ -79,6 +79,7 @@ class LoginScreenUI extends StatelessWidget {
                                     text: localData.enteryouremailandpassword,
                                   ),
                                   InputText(
+                                      testID: "emal-input",
                                       textInputType: TextInputType.emailAddress,
                                       textEditingController: emailController,
                                       password: false,
@@ -109,6 +110,7 @@ class LoginScreenUI extends StatelessWidget {
                                         }
                                       }),
                                   InputText(
+                                      testID: "password-input",
                                       textEditingController: passwordController,
                                       password: true,
                                       hint: localData.password,
@@ -181,6 +183,7 @@ class LoginScreenUI extends StatelessWidget {
                                     height: 22,
                                   ),
                                   AppButton(
+                                    testID: "login",
                                     function: () {
                                       loginUser();
                                     },

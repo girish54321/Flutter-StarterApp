@@ -16,9 +16,6 @@ class ReqResApp extends StatelessWidget {
   Widget build(BuildContext context) {
     GetStorage box = GetStorage();
     GetInstance().put<SettingController>(SettingController());
-    print(box.hasData('token'));
-    print("DAKR");
-    print(box.hasData('darkThem'));
     return GetMaterialApp(
       title: 'Flutter Demo',
       localizationsDelegates: AppLocalizations.localizationsDelegates,

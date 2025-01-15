@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
+  final String testID;
   final Widget child;
   final Color? color;
   final Function() function;
 
   const AppButton(
-      {Key? key, this.color, required this.child, required this.function})
+      {Key? key,
+      this.color,
+      required this.child,
+      required this.function,
+      required this.testID})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Key(testID),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0)),
       child: ElevatedButton(
+        key: Key("$testID-button"),
         onPressed: function,
         style: ElevatedButton.styleFrom(
           textStyle: const TextStyle(color: Colors.black),

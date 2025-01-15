@@ -80,6 +80,7 @@ class SignUpScreenUI extends StatelessWidget {
                                     text: localData.enteryouremailandpassword,
                                   ),
                                   InputText(
+                                      testID: "emal-input",
                                       textInputType: TextInputType.emailAddress,
                                       textEditingController: emailController,
                                       password: false,
@@ -110,6 +111,7 @@ class SignUpScreenUI extends StatelessWidget {
                                         }
                                       }),
                                   InputText(
+                                      testID: "password-input",
                                       textEditingController: passwordController,
                                       password: true,
                                       hint: localData.password,
@@ -139,6 +141,7 @@ class SignUpScreenUI extends StatelessWidget {
                                         }
                                       }),
                                   InputText(
+                                      testID: "confirm-password-input",
                                       textEditingController: passwordController,
                                       password: true,
                                       hint: localData.confirmpassword,
@@ -199,6 +202,7 @@ class SignUpScreenUI extends StatelessWidget {
                                     height: 22,
                                   ),
                                   AppButton(
+                                    testID: "signup",
                                     function: () {
                                       loginUser();
                                     },

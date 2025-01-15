@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InputText extends StatefulWidget {
+  final String testID;
   final String? hint;
   final Widget? rightIcon;
   final Widget? leftIcon;
@@ -26,7 +27,8 @@ class InputText extends StatefulWidget {
       this.textInputType,
       this.errorText,
       this.onChnaged,
-      this.validator});
+      this.validator,
+      required this.testID});
 
   @override
   _InputTextState createState() => _InputTextState();
@@ -36,9 +38,11 @@ class _InputTextState extends State<InputText> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      key: Key(widget.testID),
       padding: const EdgeInsets.only(bottom: 18, top: 9),
       decoration: const BoxDecoration(),
       child: TextFormField(
+        key: Key("${widget.testID}-form"),
         keyboardType: widget.textInputType,
         focusNode: widget.focusNode,
         onChanged: widget.onChnaged,
