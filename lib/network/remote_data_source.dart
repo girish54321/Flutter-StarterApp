@@ -10,7 +10,8 @@ import 'package:reqres_app/network/util/request_type.dart';
 import 'package:reqres_app/widget/DialogHelper.dart';
 
 class RemoteDataSource {
-  ReqResClient client = ReqResClient(Client());
+  final client = ReqResClient(Client());
+  RemoteDataSource(client);
 
   Future<Result> userLogin(parameter) async {
     Result incomingData = Result.loading("Loading");
@@ -25,11 +26,14 @@ class RemoteDataSource {
             LoginSuccess.fromJson(json.decode(response.body)));
         return incomingData;
       } else {
+        print("code " + response.statusCode!.toString());
+        print("My Else Error: " + response.body.toString());
         DialogHelper.showErrorDialog(description: response.body.toString());
         incomingData = Result.error(response.statusCode);
         return incomingData;
       }
     } catch (error) {
+      print("in catch error: " + error!.toString());
       incomingData = Result.error("Something went wrong!");
       DialogHelper.showErrorDialog(description: "Something went wrong!");
       return incomingData;

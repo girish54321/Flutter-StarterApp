@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:http/http.dart';
 import 'package:reqres_app/App/HomeScreen/HomeScreenUI.dart';
 import 'package:reqres_app/App/SettingsScreen/SettingsScreen.dart';
 import 'package:reqres_app/App/UserInfoScreen/userinfoScreenUI.dart';
@@ -27,7 +28,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  RemoteDataSource _apiResponse = RemoteDataSource();
+  RemoteDataSource _apiResponse = RemoteDataSource(Client());
   final ProductController controller = Get.put(ProductController());
   final List<AppMenuItem> menu = [];
 

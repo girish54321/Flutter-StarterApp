@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:http/http.dart';
 import 'package:reqres_app/App/HomeScreen/HomeScreen.dart';
 import 'package:reqres_app/App/auth/signUp/SignUpUI.dart';
 import 'package:reqres_app/network/dataModel/LoginSuccess.dart';
@@ -51,7 +52,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     if (_formKey.currentState!.validate()) {
       Helper().dismissKeyBoard(context);
       Helper().showLoading();
-      RemoteDataSource _apiResponse = RemoteDataSource();
+      RemoteDataSource _apiResponse = RemoteDataSource(Client());
       var parameter = {"email": "eve.holt@reqres.in", "password": "cityslicka"};
       Future<Result> result = _apiResponse.userLogin(parameter);
       result.then((value) {

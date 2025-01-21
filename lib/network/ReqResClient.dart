@@ -28,8 +28,10 @@ class ReqResClient {
         var uri = _baseUrl +
             path +
             ((params != null) ? this.queryParameters(params) : "");
+        print("GET " + uri);
         return _client.get(Uri.parse(uri));
       case RequestType.POST:
+        print("POST " + "$_baseUrl/$path");
         return _client.post(Uri.parse("$_baseUrl/$path"),
             headers: headers, body: json.encode(parameter));
       case RequestType.DELETE:

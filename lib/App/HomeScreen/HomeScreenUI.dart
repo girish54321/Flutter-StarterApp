@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:http/http.dart';
 import 'package:reqres_app/App/HomeScreen/HomeScreen.dart';
 import 'package:reqres_app/network/model/result.dart';
 import 'package:reqres_app/network/model/userListModal.dart';
@@ -119,7 +120,7 @@ class MySeachDeeget extends SearchDelegate {
     required this.hintText,
     required this.goToUserInfoScreen,
   });
-  RemoteDataSource _apiResponse = RemoteDataSource();
+  RemoteDataSource _apiResponse = RemoteDataSource(Client());
   final ProductController controller = Get.put(ProductController());
   var ppp = 1;
   @override
