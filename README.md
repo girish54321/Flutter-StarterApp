@@ -27,7 +27,7 @@ Get started building your dream app today with this Flutter starter repo!
 Clone the project
 
 ```bash
-  git clone https://github.com/girish54321/Flutter-Starter.git
+  git clone https://github.com/girish54321/Flutter-Starter-App.git
 ```
 
 ```bash
